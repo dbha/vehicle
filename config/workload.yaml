@@ -29,6 +29,10 @@ spec:
       prometheus.io/path: /actuator/prometheus
       prometheus.io/port: "8081"
       prometheus.io/scrape: "true"
+  - name: testing_pipeline_matching_labels
+    value:
+      apps.tanzu.vmware.com/language: java
+      apps.tanzu.vmware.com/pipeline: test    
   resources:
     limits:
       memory: 256Mi
