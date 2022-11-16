@@ -5,7 +5,6 @@ metadata:
     app.kubernetes.io/part-of: vehicle
     apps.tanzu.vmware.com/workload-type: web
     apps.tanzu.vmware.com/has-tests: "true"
-    apps.tanzu.vmware.com/language: java
   name: vehicle
 spec:
   source:
@@ -29,6 +28,10 @@ spec:
       prometheus.io/path: /actuator/prometheus
       prometheus.io/port: "8081"
       prometheus.io/scrape: "true"
+  - name: testing_pipeline_matching_labels
+    value:
+      apps.tanzu.vmware.com/language: java
+      apps.tanzu.vmware.com/pipeline: test
   resources:
     limits:
       memory: 256Mi
