@@ -1,17 +1,17 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: vehicle-api
-  description: vehicle-api
+  name: vehicle
+  description: vehicle
   tags:
   - java
   - spring
   - web
   annotations:
-    'backstage.io/kubernetes-label-selector': 'app.kubernetes.io/part-of=vehicle-api'
+    'backstage.io/kubernetes-label-selector': 'app.kubernetes.io/part-of=vehicle'
 spec:
   type: service
   lifecycle: experimental
   owner: demo
   providesApis:
-  - vehicle-api
+  - vehicle
